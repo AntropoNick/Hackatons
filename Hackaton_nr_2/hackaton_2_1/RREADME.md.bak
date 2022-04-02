@@ -6,9 +6,9 @@ The program automatically generates text messages (this can be emails) based on 
 ## Features
 ### Checking for errors
  - checking if the csv file exists
- - class format: must be one digt and one letter nad can't be empty
+ - class format: must be one digt and one letter and can't be empty
  - correction of the name and surname: first and last name in capital letters
- - check if the value: wort to do and grade is number
+ - check if the value: work to do and grade is number
 
 ### Used
 - function

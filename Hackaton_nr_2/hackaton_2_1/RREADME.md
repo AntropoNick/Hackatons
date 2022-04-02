@@ -14,7 +14,7 @@ The program automatically generates text messages (this can be emails) based on 
 - function
 - list
 - turle
-- directory
+- dictionary 
 - exceptions
 - loops
 - save to file
