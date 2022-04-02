@@ -1,7 +1,7 @@
-klasa;imie;nazwisko;brakujace_zadania;ocena
-3A;adam;Kowalski;2;3
-3A;Julia;Kaminska;3;2
-3A;Adrzej;Grabowski;1;4
-2A;rzegorz;Galinski;0;5
-2A;Mariusz;Baranski;7;2
-2A;Kamil;Radke;5;4
+nr_class;name;surname;work_to_do;grade
+3A;JOhn;Snow;2;3
+3A;Natalie;Portman;3;2
+3A;Jacob;Edwards;1;4
+2A;Emily;Martin;0;5
+2A;Irene;Clarke;4;2
+2A;Olympia;Harris;5;4

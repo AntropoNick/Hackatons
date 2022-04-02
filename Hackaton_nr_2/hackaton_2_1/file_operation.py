@@ -1,14 +1,30 @@
 def check_values(values):
-    check_size(values)
-    return values
+    (nr_class,name,surname,work_to_do,grade)=tuple(values)
+    name=correct_size_letter(name)
+    surname=correct_size_letter(surname)
+    if not check_class(nr_class):
+        print (f"Incorrect class notation for a studen {name} {surname}")
+    work_to_do = make_value(work_to_do,name, surname,'work to do')
+    grade = make_value(grade, name, surname, 'grade')
+    return [nr_class,name,surname,work_to_do,grade]
 
-def check_size(values):
+def correct_size_letter(input):
     # check size first letter
-    values[1]=values[1].capitalize()
-    values[2]=values[2].capitalize()
-    return values
+    return(input.lower()).capitalize()
 
-#def check_class(value)
+def check_class(input):
+    try:
+        return input[1].isalpha() and input[0].isnumeric()
+    except Exception:
+        print ("Empty or incomplete field class")
+        exit(1)
+
+def make_value (input, name, surname, task):
+    try:
+        return(int(input))
+    except Exception:
+        print (f'Incorrect value {task} for student {name} {surname}')
+        exit(1)
 
 
 def import_data(filename):
@@ -27,12 +43,10 @@ def import_data(filename):
                 values=check_values(values)
                 # Make dictionary from file value
                 key_name=(f"{values[0]}_{values[1]}_{values[2]}")
-                values[3]=int(values[3])
-                values[4]=int(values[4])
                 dict_student[key_name]=values[1:]
             return dict_student
     except (FileNotFoundError) as err:
-        print("Taki plik nie istnieje. Spróbuj wprowadzić ponownie nazwe pliku")
+        print("This file does not exist. Try re-entering the file name")
 
 
 
