@@ -29,7 +29,7 @@ def import_data(filename):
                 key_name=(f"{values[0]}_{values[1]}_{values[2]}")
                 values[3]=int(values[3])
                 values[4]=int(values[4])
-                dict_student[key_name]=values
+                dict_student[key_name]=values[1:]
             return dict_student
     except (FileNotFoundError) as err:
         print("Taki plik nie istnieje. Spróbuj wprowadzić ponownie nazwe pliku")
